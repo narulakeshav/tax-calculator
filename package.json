@@ -1,0 +1,12 @@
+{
+    "name": "Tax Calculator",
+    "version": "1.0",
+    "description": "Calculate price after tax",
+    "main": "creative.js",
+    "keywords": [
+        "Calculate",
+        "Price with Sales Tax"
+    ],
+    "author": "Keshav Narula",
+    "license": "MIT",
+}
