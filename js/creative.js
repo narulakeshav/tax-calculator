@@ -1,34 +1,35 @@
 $(document).ready(function() {
 
-	//Put user's name in place of heading
-	var user_name = prompt("Please enter your first name:");
-	if(!user_name) { document.getElementById("name").innerHTML = "User,"; }
-	else { document.getElementById("name").innerHTML = user_name + ","; }
+    //PUT USER'S NAME IN THE HEADING
+    var user_name = prompt("Please enter your first name:");
+    if(!user_name) { document.getElementById("name").innerHTML = "User,"; }
+    else 
+    {
+        user_name = user_name.charAt(0).toUpperCase() + user_name.slice(1).toLowerCase() + ",";
+        document.getElementById("name").innerHTML = user_name;
+    }
 
-	$('#calculate').click(function() {
-		//Grab the value of the element in HTML file by id 
-		var price = document.getElementById("price").value;
-		var tax = document.getElementById("tax").value;
+    //CALCULATE TAX WHEN BUTTON IS CLICKED
+    $('#calculate').click(function() {
+        //GRAB THE VALUE OF THE ELEMENT IN THE HTML FILE BY ID
+        var price = document.getElementById("price").value;
+        var tax = document.getElementById("tax").value;
 
-		//Validate to see if value of price or tax is empty
-		if(price === "" || tax === "") {
-			alert("Please enter value for the input(s).");
-		}
+        //CHANGE PRICE TO DECIMAL AND REMOVES "$"
+        price = parseFloat(price.replace("$", ""));
 
-		//Change price to decimal and removes "$"
-		price = parseFloat(price.replace("$", ""));
+        //TURN PERCENT INTO DECIMAL AND REMOVES THE "%"
+        tax = parseFloat(tax.replace("%", "")) / 100;
 
-		//Turn percent into decimal and removes the "%"
-		tax = parseFloat(tax.replace("%", "")) / 100;
+        //ROUND TOTAL TO TWO DECIMAL PLACES AND DISPLAY IN '.amount'
+        var total = (price + (price * tax)).toFixed(2);
+        $('.amount').html("$" + total);
+    });
 
-		//Round total to two decimal places and display in '.amount'
-		var total = (price + (price * tax)).toFixed(2);
-		$('.amount').html("$" + total);
-	});
-
-	//Reset the values of input field on button click
-	$('#reset').click(function() {
-		document.getElementById("price").value = "";
-		document.getElementById("tax").value = "";
-	});
+    //RESET THE VALUES OF INPUT FIELD ON BUTTON CLICK
+    $('#reset').click(function() {
+        document.getElementById("price").value = "";
+        document.getElementById("tax").value = "";
+        document.getElementById("amount").innerHTML = "$0.00";
+    });
 });

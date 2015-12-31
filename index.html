@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name = "viewport" content="width=device-width">
-	
-	<!-- Favicon and Title -->
-	<title>Tax Calculator</title>
-	<link rel="shortcut icon" href="img/favicon.png">
+    <meta name = "viewport" content="width=device-width">
+    
+    <!-- Favicon and Title -->
+    <title>Tax Calculator</title>
+    <link rel="shortcut icon" href="img/favicon.png">
 
-	<!-- CSS Files -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/creative.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	
-	<!-- Google Font(s) Import -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet'>
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/creative.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <!-- Google Font(s) Import -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet'>
 </head>
 <body>
-	<!-- HTML form and heading -->
-	<div class="container">
-		<div class="col-md-4 col-md-offset-4" align="center">
-			<h1 class="heading" id="name">Tax Calculator</h1>
-			<p class="sub-heading">you pay <span class="amount">$0.00</span> w/ tax</p>
-			<form>
-				<p class="form-text">Calculate price with tax</p>
-				<div class="form-group">
-					<label for="price">Product Price</label>
-					<input type="text" class="form-control" id="price" placeholder="$15.50" required>
-				</div>
-				<div class="form-group">
-					<label for="tax">Tax Rate of State</label>
-					<input type="text" class="form-control" id="tax" placeholder="7.5%" required>
-				</div>
-				<div class="col-md-12" align="right">
-					<button type="button" class="btn btn-calculate reset" id="reset"><span class="fa fa-refresh"></span>&nbsp;&nbsp;Reset</button>
-					<button type="button" class="btn btn-calculate" id="calculate"><span class="fa fa-percent"></span>&nbsp;&nbsp;Calculate</button>
-				</div>
-			</form>
-			<div class="col-md-12 sticky-bottom">
-				<a href="https://linkedin.com/in/NarulaKeshav" class="btn btn-social linkedin" target="_blank">
-					<span class="fa fa-linkedin"></span>
-				</a>
-				<a href="https://twitter.com/NarulaKeshav" class="btn btn-social twitter" target="_blank">
-					<span class="fa fa-twitter"></span>
-				</a>
-				<a href="https://github.com/NarulaKeshav" class="btn btn-social github" target="_blank">
-					<span class="fa fa-github"></span>
-				</a>
-			</div>
-		</div>
-	</div>
+    <!-- HTML form and heading -->
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4" align="center">
+            <h1 class="heading" id="name">Tax Calculator</h1>
+            <p class="sub-heading">you'll pay <span class="amount" id="amount">$0.00</span> w/ tax</p>
+            <form>
+                <p class="form-text">Calculate price with tax</p>
+                <div class="form-group">
+                    <label for="price">Product Price</label>
+                    <input type="text" class="form-control" id="price" placeholder="$15.50 or 15.50" required>
+                </div>
+                <div class="form-group">
+                    <label for="tax">Tax Rate of State</label>
+                    <input type="text" class="form-control" id="tax" placeholder="7.5% or 7.5" required>
+                </div>
+                <div class="col-md-12" align="right">
+                    <button type="button" class="btn btn-calculate reset" id="reset"><span class="fa fa-refresh"></span>&nbsp;&nbsp;Reset</button>
+                    <button type="button" class="btn btn-calculate" id="calculate"><span class="fa fa-percent"></span>&nbsp;&nbsp;Calculate</button>
+                </div>
+            </form>
+            <div class="col-md-12 sticky-bottom">
+                <a href="https://linkedin.com/in/NarulaKeshav" class="btn btn-social linkedin" target="_blank">
+                    <span class="fa fa-linkedin"></span>
+                </a>
+                <a href="https://twitter.com/NarulaKeshav" class="btn btn-social twitter" target="_blank">
+                    <span class="fa fa-twitter"></span>
+                </a>
+                <a href="https://github.com/NarulaKeshav" class="btn btn-social github" target="_blank">
+                    <span class="fa fa-github"></span>
+                </a>
+            </div>
+        </div>
+    </div>
 
-	<!-- JavaScript Files -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/creative.js"></script>
+    <!-- JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/creative.js"></script>
 </body>
 </html>
