@@ -9,11 +9,6 @@ $(document).ready(function() {
 			alert("Please enter value for the input(s).");
 		}
 
-		//Validate to see if user entered string as input
-		else if(typeof price === "string" || typeof tax === "string") {
-			alert("Please enter valid inputs. Don't break my code!");
-		}
-
 		//Change price to decimal and removes "$"
 		price = parseFloat(price.replace("$", ""));
 
