@@ -16,7 +16,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet'>
 </head>
 <body>
-	<!-- -->
+	<!-- HTML form and heading -->
 	<div class="container">
 		<div class="col-md-4 col-md-offset-4" align="center">
 			<h1 class="heading">Tax Calculator</h1>
@@ -24,15 +24,16 @@
 			<form>
 				<p class="form-text">Calculate price with tax</p>
 				<div class="form-group">
-					<label for="price"><span class="fa fa-usd"></span>&nbsp;Product Price</label>
+					<label for="price">Product Price</label>
 					<input type="text" class="form-control" id="price" placeholder="$15.50" required>
 				</div>
 				<div class="form-group">
-					<label for="tax"><span class="fa fa-percent"></span>&nbsp;Tax Rate</label>
+					<label for="tax">Tax Rate</label>
 					<input type="text" class="form-control" id="tax" placeholder="7.5%" required>
 				</div>
 				<div class="col-md-12" align="right">
-					<button type="button" class="btn btn-calculate">Calculate</button>
+					<button type="button" class="btn btn-calculate reset" id="reset"><span class="fa fa-refresh"></span>&nbsp;&nbsp;Reset</button>
+					<button type="button" class="btn btn-calculate" id="calculate"><span class="fa fa-percent"></span>&nbsp;&nbsp;Calculate</button>
 				</div>
 			</form>
 			<div class="col-md-12 sticky-bottom">
@@ -53,5 +54,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/creative.js"></script>
+	<script src="js/night-mode.js"></script>
 </body>
 </html>

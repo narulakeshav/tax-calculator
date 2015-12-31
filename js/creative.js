@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('.btn-calculate').click(function() {
+	$('#calculate').click(function() {
 		//Grab the value of the element in HTML file by id 
 		var price = document.getElementById("price").value;
 		var tax = document.getElementById("tax").value;
@@ -7,11 +7,6 @@ $(document).ready(function() {
 		//Validate to see if value of price or tax is empty
 		if(price === "" || tax === "") {
 			alert("Please enter value for the input(s).");
-		}
-
-		//Validate to see if user entered string as input
-		else if(typeof price === "string" || typeof tax === "string") {
-			alert("Please enter valid inputs. Don't break my code!");
 		}
 
 		//Change price to decimal and removes "$"
@@ -23,5 +18,11 @@ $(document).ready(function() {
 		//Round total to two decimal places and display in '.amount'
 		var total = (price + (price * tax)).toFixed(2);
 		$('.amount').html("$" + total);
+	});
+
+	//Reset the values of input field on button click
+	$('#reset').click(function() {
+		document.getElementById("price").value = "";
+		document.getElementById("tax").value = "";
 	});
 });
