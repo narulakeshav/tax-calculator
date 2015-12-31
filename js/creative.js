@@ -1,35 +1,41 @@
 $(document).ready(function() {
 
-    //PUT USER'S NAME IN THE HEADING
-    var user_name = prompt("Please enter your first name:");
-    if(!user_name) { document.getElementById("name").innerHTML = "User,"; }
-    else 
-    {
-        user_name = user_name.charAt(0).toUpperCase() + user_name.slice(1).toLowerCase() + ",";
-        document.getElementById("name").innerHTML = user_name;
-    }
-
     //CALCULATE TAX WHEN BUTTON IS CLICKED
     $('#calculate').click(function() {
         //GRAB THE VALUE OF THE ELEMENT IN THE HTML FILE BY ID
         var price = document.getElementById("price").value;
         var tax = document.getElementById("tax").value;
 
-        //CHANGE PRICE TO DECIMAL AND REMOVES "$"
-        price = parseFloat(price.replace("$", ""));
+        //IF INPUTS ARE EMPTY, SHOW THE FOLLOWING MESSAGE
+        if(price === "" || tax === "") {
+            document.getElementById("sub").innerHTML = "Don't leave inputs blank 😉";
+        }
 
-        //TURN PERCENT INTO DECIMAL AND REMOVES THE "%"
-        tax = parseFloat(tax.replace("%", "")) / 100;
+        //IF USER PUTS ALPHABETS IN INPUT, SHOW THE FOLLOWING MESSAGE
+        else if(price.match(/[a-z]/g) != null || tax.match(/[a-z]/g) != null) {
+            document.getElementById("sub").innerHTML = "Don't enter alphabets yo 😉";
+        }
+        else {
+            //CHANGE PRICE TO DECIMAL AND REMOVES "$"
+            price = parseFloat(price.replace("$", ""));
 
-        //ROUND TOTAL TO TWO DECIMAL PLACES AND DISPLAY IN '.amount'
-        var total = (price + (price * tax)).toFixed(2);
-        $('.amount').html("$" + total);
+            //TURN PERCENT INTO DECIMAL AND REMOVES THE "%"
+            tax = parseFloat(tax.replace("%", "")) / 100;
+
+            //ROUND TOTAL TO TWO DECIMAL PLACES
+            var total = (price + (price * tax)).toFixed(2);
+
+            //DISPLAY THE AMOUNT IN '.amount' AND SHOW MESSAGE
+            $('.amount').html("$" + total);
+            document.getElementById("sub").innerHTML = "There you go 😉";
+        }
     });
 
-    //RESET THE VALUES OF INPUT FIELD ON BUTTON CLICK
+    //RESET THE VALUES OF INPUT FIELD/MESSAGES ON BUTTON CLICK
     $('#reset').click(function() {
         document.getElementById("price").value = "";
         document.getElementById("tax").value = "";
         document.getElementById("amount").innerHTML = "$0.00";
+        document.getElementById("sub").innerHTML = "message";
     });
 });
