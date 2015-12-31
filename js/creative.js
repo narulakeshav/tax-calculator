@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+	//Put user's name in place of heading
+	var user_name = prompt("Please enter your first name:");
+	if(!user_name) { document.getElementById("name").innerHTML = "User,"; }
+	else { document.getElementById("name").innerHTML = user_name + ","; }
+
 	$('#calculate').click(function() {
 		//Grab the value of the element in HTML file by id 
 		var price = document.getElementById("price").value;
