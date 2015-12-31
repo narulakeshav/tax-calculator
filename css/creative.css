@@ -4,7 +4,7 @@
 }
 body {
     background: -webkit-linear-gradient(-60deg, #EEE 0%,#EEE 50%,#DDD 50%,#DDD 100%);
-    padding-top: 1em;
+    padding-top: 2em;
     height: 100vh;
     font-family: Roboto;
 }
@@ -20,7 +20,7 @@ body {
 }
 .heading {
     font-weight: 200;
-    font-size: 45px;
+    font-size: 40px;
     color: #666;
 }
 .sub-heading {
