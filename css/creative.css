@@ -4,7 +4,7 @@
 }
 body {
 	background: -webkit-linear-gradient(-60deg, #EEE 0%,#EEE 50%,#DDD 50%,#DDD 100%);
-	padding-top: 2.5em;
+	padding-top: 1em;
 	height: 100vh;
 	font-family: Roboto;
 }
@@ -94,7 +94,7 @@ label {
 }
 .reset,
 .reset:focus {
-	background: #888;
+	background: #999;
 	margin-right: 3px;
 	outline: 0;
 }
