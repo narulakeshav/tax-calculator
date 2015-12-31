@@ -1,5 +1,5 @@
 # Tax Calculator
-## [View Tax Calculator](https://narulakeshav.github.io/tax-calculator)
+[View Tax Calculator](https://narulakeshav.github.io/tax-calculator)
 
 This is a little side project that *calculates the price after tax.*
 
