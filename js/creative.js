@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+    //PUT USER'S NAME IN THE HEADING
+    var user_name = prompt("Please enter your first name:");
+    if(!user_name) { document.getElementById("name").innerHTML = "User,"; }
+    else 
+    {
+        user_name = user_name.charAt(0).toUpperCase() + user_name.slice(1).toLowerCase() + ",";
+        document.getElementById("name").innerHTML = user_name;
+    }
+
     //CALCULATE TAX WHEN BUTTON IS CLICKED
     $('#calculate').click(function() {
         //GRAB THE VALUE OF THE ELEMENT IN THE HTML FILE BY ID
@@ -23,13 +32,4 @@ $(document).ready(function() {
         document.getElementById("tax").value = "";
         document.getElementById("amount").innerHTML = "$0.00";
     });
-
-    //PUT USER'S NAME IN THE HEADING
-    var user_name = prompt("Please enter your first name:");
-    if(!user_name) { document.getElementById("name").innerHTML = "User,"; }
-    else 
-    {
-        user_name = user_name.charAt(0).toUpperCase() + user_name.slice(1).toLowerCase() + ",";
-        document.getElementById("name").innerHTML = user_name;
-    }
 });
