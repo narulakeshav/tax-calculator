@@ -3,7 +3,7 @@
 
 This is a little side project that *calculates the price after tax.*
 
-![Screenshot](http://goo.gl/EQ7zUU)
+![Screenshot](http://goo.gl/D09XbK)
 
 # How it Works
 By assigning the HTML `<input>` id, I was able to call them through JavaScript.
