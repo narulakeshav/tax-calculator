@@ -15,8 +15,7 @@ Then by calling the `getElementsById()` method, I was able to capture the input.
 var price = documents.getElementById('price');
 ```
 
-________________________________________________
-
+#Why
 I wanted to use jQuery, but I'm trying to learn JavaScript so I did it the old fashioned way, although I did use jQuery for the `click(function() { ... })`
 
 I'm learning JavaScript and building small projects like these to learn how to use JavaScript with HTML.
