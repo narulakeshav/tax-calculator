@@ -1,11 +1,13 @@
 # Tax Calculator
 This is a little side project that *calculates the price after tax.*
 
-![Screenshot](http://)
+![Screenshot](http://goo.gl/s6fLdG)
 
 # How it Works
 By assigning the HTML `<input>` id, I was able to call them through JavaScript.
 Then by calling the `getElementsById()` method, I was able to capture the input.
+
+I wanted to use jQuery, but I'm trying to learn JavaScript so I did it the old fashioned way, although I did use jQuery for the `click(function() { ... })`
 
 ```
 <input type="text" id="price">
